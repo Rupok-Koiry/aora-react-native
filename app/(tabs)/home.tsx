@@ -8,12 +8,13 @@ import SearchInput from "@/components/SearchInput";
 import EmptyState from "@/components/EmptyState";
 import useAppwrite from "@/hooks/useAppwrite";
 import { getAllPosts, getLatestPosts } from "../../lib/appwrite";
+import Trending from "@/components/Trending";
 const videos = [
   {
     $id: "1",
     title: "Get inspired to code",
     thumbnail: "https://i.ibb.co/tJBcX20/Appwrite-video.png",
-    video: "https://player.vimeo.com/video/949579770?h=897cd5e781",
+    video: "https://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4",
     prompt:
       "Create a motivating AI driven video aimed at inspiring coding enthusiasts with simple language",
     creator: {
@@ -25,7 +26,7 @@ const videos = [
     $id: "2",
     title: "How AI Shapes Coding Future",
     thumbnail: "https://i.ibb.co/Xkgk7DY/Video.png",
-    video: "https://player.vimeo.com/video/949581999?h=4672125b31",
+    video: "https://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4",
     prompt: "Picture the future of coding with AI. Show AR VR",
     creator: {
       username: "Jane Smith",
@@ -36,7 +37,7 @@ const videos = [
     $id: "3",
     title: "Dalmatian's journey through Italy",
     thumbnail: "https://i.ibb.co/CBYzyKh/Video-1.png",
-    video: "https://player.vimeo.com/video/949582778?h=d60220d68d",
+    video: "https://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4",
     prompt:
       "Create a heartwarming video following the travels of dalmatian dog exploring beautiful Italy",
     creator: {
@@ -48,7 +49,7 @@ const videos = [
     $id: "4",
     title: "Meet small AI friends",
     thumbnail: "https://i.ibb.co/7XqVPVT/Photo-1677756119517.png",
-    video: "https://player.vimeo.com/video/949616422?h=d60220d68d",
+    video: "https://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4",
     prompt:
       "Make a video about a small blue AI robot blinking its eyes and looking at the screen",
     creator: {
@@ -60,7 +61,7 @@ const videos = [
     $id: "5",
     title: "Find inspiration in Every Line",
     thumbnail: "https://i.ibb.co/mGfCYJY/Video-2.png",
-    video: "https://player.vimeo.com/video/949617485?h=d60220d68d",
+    video: "https://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4",
     prompt:
       "A buy working on his laptop that sparks excitement for coding, emphasizing the endless possibilities and personal growth it offers",
     creator: {
@@ -72,7 +73,7 @@ const videos = [
     $id: "6",
     title: "Japan's Blossoming temple",
     thumbnail: "https://i.ibb.co/3Y2Nk7q/Bucket-215.png",
-    video: "https://player.vimeo.com/video/949618057?h=d60220d68d",
+    video: "https://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4",
     prompt: "Create a captivating video journey through Japan's Sakura Temple",
     creator: {
       username: "Eva White",
@@ -83,7 +84,7 @@ const videos = [
     $id: "7",
     title: "A Glimpse into Tomorrow's VR World",
     thumbnail: "https://i.ibb.co/C5wXXf9/Video-3.png",
-    video: "https://player.vimeo.com/video/949620017?h=d60220d68d",
+    video: "https://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4",
     prompt: "An imaginative video envisioning the future of Virtual Reality",
     creator: {
       username: "Frank Black",
@@ -94,7 +95,7 @@ const videos = [
     $id: "8",
     title: "A World where Ideas Grow Big",
     thumbnail: "https://i.ibb.co/DzXRfyr/Bucket-59038.png",
-    video: "https://player.vimeo.com/video/949620200?h=d60220d68d",
+    video: "https://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4",
     prompt:
       "Make a fun video about hackers and all the cool stuff they do with computers",
     creator: {
@@ -159,7 +160,7 @@ const Home = () => {
                 Latest Videos
               </Text>
 
-              {/* <Trending posts={latestPosts ?? []} /> */}
+              <Trending posts={videos ?? []} />
             </View>
           </View>
         )}

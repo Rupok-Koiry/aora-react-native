@@ -1,24 +1,10 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { ResizeMode, Video } from "expo-av";
 import { View, Text, TouchableOpacity, Image } from "react-native";
+
 import { icons } from "../constants";
 
-// Define the types for the props
-interface VideoCardProps {
-  title: string;
-  creator: string;
-  avatar: string;
-  thumbnail: string;
-  video: string;
-}
-
-const VideoCard: React.FC<VideoCardProps> = ({
-  title,
-  creator,
-  avatar,
-  thumbnail,
-  video,
-}) => {
+const VideoCard = ({ title, creator, avatar, thumbnail, video }) => {
   const [play, setPlay] = useState(false);
 
   return (
